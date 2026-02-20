@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Cyber Shield - DDoS Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Smart Cyber Shield</h1>
+    <p>DDoS Attack Detection System using Machine Learning</p>
+</header>
+
+<section>
+    <h2>About the Project</h2>
+    <p>This system detects Distributed Denial of Service (DDoS) attacks using Machine Learning.</p>
+</section>
+
+<section>
+    <h2>Live Traffic Prediction</h2>
+
+    <form action="/predict" method="POST">
+        <input type="text" name="feature1" placeholder="Enter Feature 1" required>
+        <input type="text" name="feature2" placeholder="Enter Feature 2" required>
+        <input type="text" name="feature3" placeholder="Enter Feature 3" required>
+
+        <button type="submit">Traffic Prediction</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</section>
+
+<footer>
+    <p>© 2026 Smart Cyber Shield</p>
+</footer>
+
+</body>
+</html>
